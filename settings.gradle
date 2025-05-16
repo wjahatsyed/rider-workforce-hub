@@ -1,0 +1,4 @@
+rootProject.name = 'rider-workforce-hub'
+
+include 'rider-service'
+include 'schedule-service'

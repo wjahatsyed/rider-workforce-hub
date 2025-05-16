@@ -3,11 +3,31 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="ms-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/rider-service" />
+            <option value="$PROJECT_DIR$/schedule-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/rider-service" />
         <option name="gradleJvm" value="ms-21" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/rider-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/schedule-service" />
+        <option name="gradleJvm" value="ms-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/schedule-service" />
           </set>
         </option>
       </GradleProjectSettings>
