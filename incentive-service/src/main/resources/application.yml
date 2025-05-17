@@ -1,0 +1,20 @@
+server:
+  port: 8073
+
+spring:
+  application:
+    name: incentive-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/incentive_db
+    username: incentive_user
+    password: incentive_pass
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  kafka:
+    bootstrap-servers: localhost:9092

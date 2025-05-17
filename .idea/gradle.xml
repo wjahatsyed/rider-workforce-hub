@@ -8,8 +8,18 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/incentive-service" />
             <option value="$PROJECT_DIR$/rider-service" />
             <option value="$PROJECT_DIR$/schedule-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/incentive-service" />
+        <option name="gradleJvm" value="ms-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/incentive-service" />
           </set>
         </option>
       </GradleProjectSettings>
