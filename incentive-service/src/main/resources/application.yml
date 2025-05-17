@@ -7,8 +7,8 @@ spring:
 
   datasource:
     url: jdbc:postgresql://localhost:5432/incentive_db
-    username: incentive_user
-    password: incentive_pass
+    username: postgres
+    password: postgres
 
   jpa:
     hibernate:
