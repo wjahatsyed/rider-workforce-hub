@@ -7,24 +7,34 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api/shifts")
-class ShiftController(private val shiftService: ShiftService) {
+class ShiftController(
+    private val shiftService: ShiftService
+) {
 
     @PostMapping
-    fun create(@RequestBody shift: Shift): ResponseEntity<Shift> =
-        ResponseEntity.ok(shiftService.createShift(shift))
+    fun create(@RequestBody shift: Shift): ResponseEntity<Shift> {
+        val createdShift = shiftService.createShift(shift)
+        return ResponseEntity.ok(createdShift)
+    }
 
     @GetMapping("/{id}")
-    fun getById(@PathVariable id: Long): ResponseEntity<Shift> =
-        shiftService.getShiftById(id)?.let { ResponseEntity.ok(it) }
-            ?: ResponseEntity.notFound().build()
+    fun getById(@PathVariable id: Long): ResponseEntity<Shift> {
+        val found = shiftService.getShiftById(id)
+        return if (found != null) ResponseEntity.ok(found)
+        else ResponseEntity.notFound().build()
+    }
 
     @GetMapping
-    fun getAll(): ResponseEntity<List<Shift>> =
-        ResponseEntity.ok(shiftService.getAllShifts())
+    fun getAll(): ResponseEntity<List<Shift>> {
+        val shifts = shiftService.getAllShifts()
+        return ResponseEntity.ok(shifts)
+    }
 
     @PutMapping("/{id}")
-    fun update(@PathVariable id: Long, @RequestBody shift: Shift): ResponseEntity<Shift> =
-        ResponseEntity.ok(shiftService.updateShift(id, shift))
+    fun update(@PathVariable id: Long, @RequestBody shift: Shift): ResponseEntity<Shift> {
+        val updated = shiftService.updateShift(id, shift)
+        return ResponseEntity.ok(updated)
+    }
 
     @DeleteMapping("/{id}")
     fun delete(@PathVariable id: Long): ResponseEntity<Void> {
