@@ -19,4 +19,9 @@ class IncentiveServiceImpl(
         return incentiveRepository.getTopRiders(page)
     }
 
+    override fun getIncentivesByRiderId(riderId: Long): List<Incentive> {
+        return incentiveRepository.findAllByRiderId(riderId)
+    }
+
+
 }

@@ -1,12 +1,10 @@
 package com.riderworkforcehub.incentiveservice.controller
 
 import com.riderworkforcehub.incentiveservice.dto.IncentiveSummary
+import com.riderworkforcehub.incentiveservice.model.Incentive
 import com.riderworkforcehub.incentiveservice.service.IncentiveService
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestParam
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api/incentives")
@@ -19,4 +17,11 @@ class IncentiveController(
         val topRiders = incentiveService.getTopRiders(limit)
         return ResponseEntity.ok(topRiders)
     }
+
+    @GetMapping("/{riderId}")
+    fun getIncentivesByRider(@PathVariable riderId: Long): ResponseEntity<List<Incentive>> {
+        val result = incentiveService.getIncentivesByRiderId(riderId)
+        return ResponseEntity.ok(result)
+    }
+
 }

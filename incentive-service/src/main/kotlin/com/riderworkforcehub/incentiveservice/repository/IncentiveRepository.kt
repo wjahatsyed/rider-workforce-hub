@@ -18,6 +18,8 @@ interface IncentiveRepository : JpaRepository<Incentive, Long> {
 """
     )
     abstract fun getTopRiders(page: PageRequest): List<IncentiveSummary>
+    fun findAllByRiderId(riderId: Long): List<Incentive>
+
 }
 
 
