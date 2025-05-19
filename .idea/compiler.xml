@@ -8,6 +8,7 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.38/57f8f5e02e92a30fd21b80cbd426a4172b5f8e29/lombok-1.18.38.jar" />
         </processorPath>
         <module name="rider-workforce-hub.rider-service.main" />
+        <module name="rider-workforce-hub.notification-service.main" />
       </profile>
     </annotationProcessing>
   </component>
